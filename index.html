@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archivo en disputa</title>
+  <meta name="description" content="Glosario crítico de conceptos de diseño.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFFBE5'/%3E%3Cpath d='M7 24 16 7l9 17h-5l-1.7-4h-5L12 24H7z' fill='%230B3D87'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" aria-label="Navegacion principal">
+    <div class="left-nav">
+      <button class="back-button" id="back-button" type="button" aria-label="Volver al inicio" title="Volver al inicio">&larr;</button>
+    </div>
+    <nav class="right-nav" id="home-nav" aria-label="Explorar el glosario">
+      <button class="nav-button" type="button" data-view="categories" aria-pressed="true">Categorías</button>
+      <button class="nav-button" type="button" data-view="tags" aria-pressed="false">Etiquetas</button>
+      <input class="search-input" id="search-input" type="search" placeholder="Buscar" aria-label="Buscar conceptos">
+    </nav>
+    <nav class="right-nav entry-nav" id="entry-nav" aria-label="Explorar la entrada Representación" hidden>
+      <button class="nav-button entry-nav-button" type="button" data-entry-view="questions" aria-pressed="true">Preguntas</button>
+      <button class="nav-button entry-nav-button" type="button" data-entry-view="authors" aria-pressed="false">Autores</button>
+      <button class="nav-button entry-nav-button" type="button" data-entry-view="rae" aria-pressed="false">RAE</button>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="intro-pane" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="intro-kicker" id="intro-kicker">¿Quién produce el conocimiento?</p>
+        <h1 id="page-title">Archivo en disputa</h1>
+        <p class="intro-copy" id="intro-copy">Este glosario reúne conceptos provenientes del pensamiento decolonial y de los estudios críticos del diseño. Invita a cuestionar las categorías heredadas de la modernidad occidental y a reconocer la existencia de múltiples formas de producir, transmitir y validar conocimiento.</p>
+      </div>
+    </section>
+
+    <aside class="categories-pane" aria-label="Categorías del glosario">
+      <div class="panel-view" id="categories-view">
+      <section class="category">
+        <button class="category-toggle" type="button" aria-expanded="false" aria-controls="concepts-processes"><span>Procesos</span><span class="category-icon" aria-hidden="true">+</span></button>
+        <ul class="concept-list" id="concepts-processes" hidden>
+          <li><button class="concept-button" type="button">Colonialismo</button></li>
+          <li><button class="concept-button" type="button">Extractivismo</button></li>
+          <li><button class="concept-button" type="button">Modernidad</button></li>
+          <li><button class="concept-button" type="button">Mestizaje</button></li>
+          <li><button class="concept-button" type="button">Hibridación cultural</button></li>
+          <li><button class="concept-button" type="button">Colonialidad de género</button></li>
+          <li><button class="concept-button" type="button">Colonialidad</button></li>
+          <li><button class="concept-button" type="button">Representación</button></li>
+          <li><button class="concept-button" type="button">Identidad</button></li>
+        </ul>
+      </section>
+      <section class="category">
+        <button class="category-toggle" type="button" aria-expanded="false" aria-controls="concepts-tools"><span>Herramientas</span><span class="category-icon" aria-hidden="true">+</span></button>
+        <ul class="concept-list" id="concepts-tools" hidden>
+          <li><button class="concept-button" type="button">Representación</button></li>
+          <li><button class="concept-button" type="button">Identidad</button></li>
+          <li><button class="concept-button" type="button">Interfaz</button></li>
+          <li><button class="concept-button" type="button">Traducción</button></li>
+          <li><button class="concept-button" type="button">Memoria</button></li>
+          <li><button class="concept-button" type="button">Matriz de pensamiento</button></li>
+          <li><button class="concept-button" type="button">Pedagogías de la crueldad</button></li>
+          <li><button class="concept-button" type="button">Reparación</button></li>
+          <li><button class="concept-button" type="button">Tecnología</button></li>
+          <li><button class="concept-button" type="button">Resistencia</button></li>
+          <li><button class="concept-button" type="button">Archivo</button></li>
+          <li><button class="concept-button" type="button">Oralidad</button></li>
+          <li><button class="concept-button" type="button">Lengua</button></li>
+          <li><button class="concept-button" type="button">Sistema</button></li>
+          <li><button class="concept-button" type="button">Visualización</button></li>
+          <li><button class="concept-button" type="button">Diseño situado</button></li>
+        </ul>
+      </section>
+      <section class="category">
+        <button class="category-toggle" type="button" aria-expanded="false" aria-controls="concepts-knowledge"><span>Conocimiento</span><span class="category-icon" aria-hidden="true">+</span></button>
+        <ul class="concept-list" id="concepts-knowledge" hidden>
+          <li><button class="concept-button" type="button">Oralidad</button></li>
+          <li><button class="concept-button" type="button">Lengua</button></li>
+          <li><button class="concept-button" type="button">Sistema</button></li>
+          <li><button class="concept-button" type="button">Visualización</button></li>
+          <li><button class="concept-button" type="button">Diseño situado</button></li>
+          <li><button class="concept-button" type="button">Saber situado</button></li>
+          <li><button class="concept-button" type="button">Justicia cognitiva</button></li>
+          <li><button class="concept-button" type="button">Pluriverso</button></li>
+          <li><button class="concept-button" type="button">Epistemologías del Sur</button></li>
+          <li><button class="concept-button" type="button">Interculturalidad</button></li>
+          <li><button class="concept-button" type="button">Diversidad epistemológica</button></li>
+          <li><button class="concept-button" type="button">Decolonialidad</button></li>
+          <li><button class="concept-button" type="button">Desobediencia epistémica</button></li>
+          <li><button class="concept-button" type="button">Ancestralidad</button></li>
+        </ul>
+      </section>
+      <section class="category">
+        <button class="category-toggle" type="button" aria-expanded="false" aria-controls="concepts-community"><span>Comunidad</span><span class="category-icon" aria-hidden="true">+</span></button>
+        <ul class="concept-list" id="concepts-community" hidden>
+          <li><button class="concept-button" type="button">Ancestralidad</button></li>
+          <li><button class="concept-button" type="button">Comunidad</button></li>
+          <li><button class="concept-button" type="button">Comunalidad</button></li>
+          <li><button class="concept-button" type="button">Buen vivir</button></li>
+          <li><button class="concept-button" type="button">Cosmovisión</button></li>
+          <li><button class="concept-button" type="button">Reciprocidad</button></li>
+          <li><button class="concept-button" type="button">Frontera</button></li>
+          <li><button class="concept-button" type="button">Territorio</button></li>
+          <li><button class="concept-button" type="button">Desobediencia tecnológica</button></li>
+          <li><button class="concept-button" type="button">Cuerpo-territorio</button></li>
+        </ul>
+      </section>
+      </div>
+
+      <div class="panel-view" id="tags-view" hidden>
+        <section class="category">
+          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="tags-practice"><span>Práctica</span><span class="category-icon" aria-hidden="true">+</span></button>
+          <ul class="concept-list" id="tags-practice" hidden>
+            <li><button class="concept-button" type="button">Comunidad</button></li>
+            <li><button class="concept-button" type="button">Buen vivir</button></li>
+            <li><button class="concept-button" type="button">Comunalidad</button></li>
+            <li><button class="concept-button" type="button">Reciprocidad</button></li>
+            <li><button class="concept-button" type="button">Desobediencia tecnológica</button></li>
+            <li><button class="concept-button" type="button">Saber situado</button></li>
+            <li><button class="concept-button" type="button">Desobediencia epistémica</button></li>
+            <li><button class="concept-button" type="button">Diseño situado</button></li>
+            <li><button class="concept-button" type="button">Visibilización</button></li>
+            <li><button class="concept-button" type="button">Sistema</button></li>
+            <li><button class="concept-button" type="button">Oralidad</button></li>
+            <li><button class="concept-button" type="button">Tecnología</button></li>
+            <li><button class="concept-button" type="button">Resistencia</button></li>
+            <li><button class="concept-button" type="button">Traducción</button></li>
+            <li><button class="concept-button" type="button">Reparación</button></li>
+            <li><button class="concept-button" type="button">Extractivismo</button></li>
+            <li><button class="concept-button" type="button">Hibridación cultural</button></li>
+            <li><button class="concept-button" type="button">Colonialidad de género</button></li>
+          </ul>
+        </section>
+        <section class="category">
+          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="tags-principle"><span>Principio</span><span class="category-icon" aria-hidden="true">+</span></button>
+          <ul class="concept-list" id="tags-principle" hidden>
+            <li><button class="concept-button" type="button">Visibilización</button></li>
+            <li><button class="concept-button" type="button">Diseño situado</button></li>
+            <li><button class="concept-button" type="button">Saber situado</button></li>
+            <li><button class="concept-button" type="button">Justicia cognitiva</button></li>
+            <li><button class="concept-button" type="button">Pluriverso</button></li>
+            <li><button class="concept-button" type="button">Epistemologías del Sur</button></li>
+            <li><button class="concept-button" type="button">Interculturalidad</button></li>
+            <li><button class="concept-button" type="button">Diversidad epistemológica</button></li>
+            <li><button class="concept-button" type="button">Ancestralidad</button></li>
+            <li><button class="concept-button" type="button">Buen vivir</button></li>
+            <li><button class="concept-button" type="button">Cuerpo-territorio</button></li>
+            <li><button class="concept-button" type="button">Reciprocidad</button></li>
+            <li><button class="concept-button" type="button">Comunalidad</button></li>
+          </ul>
+        </section>
+        <section class="category">
+          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="tags-concept"><span>Concepto</span><span class="category-icon" aria-hidden="true">+</span></button>
+          <ul class="concept-list" id="tags-concept" hidden>
+            <li><button class="concept-button" type="button">Cosmovisión</button></li>
+            <li><button class="concept-button" type="button">Territorio</button></li>
+            <li><button class="concept-button" type="button">Cuerpo-territorio</button></li>
+            <li><button class="concept-button" type="button">Frontera</button></li>
+            <li><button class="concept-button" type="button">Diversidad epistemológica</button></li>
+            <li><button class="concept-button" type="button">Epistemologías del Sur</button></li>
+            <li><button class="concept-button" type="button">Justicia cognitiva</button></li>
+            <li><button class="concept-button" type="button">Reparación</button></li>
+            <li><button class="concept-button" type="button">Mestizaje</button></li>
+            <li><button class="concept-button" type="button">Hibridación cultural</button></li>
+            <li><button class="concept-button" type="button">Colonialidad</button></li>
+          </ul>
+        </section>
+        <section class="category">
+          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="tags-process"><span>Proceso</span><span class="category-icon" aria-hidden="true">+</span></button>
+          <ul class="concept-list" id="tags-process" hidden>
+            <li><button class="concept-button" type="button">Colonialismo</button></li>
+            <li><button class="concept-button" type="button">Extractivismo</button></li>
+            <li><button class="concept-button" type="button">Modernidad</button></li>
+            <li><button class="concept-button" type="button">Colonialidad</button></li>
+            <li><button class="concept-button" type="button">Representación</button></li>
+            <li><button class="concept-button" type="button">Identidad</button></li>
+            <li><button class="concept-button" type="button">Traducción</button></li>
+            <li><button class="concept-button" type="button">Memoria</button></li>
+            <li><button class="concept-button" type="button">Matriz de pensamiento</button></li>
+            <li><button class="concept-button" type="button">Pedagogías de la crueldad</button></li>
+            <li><button class="concept-button" type="button">Decolonialidad</button></li>
+          </ul>
+        </section>
+        <section class="category">
+          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="tags-device"><span>Dispositivo</span><span class="category-icon" aria-hidden="true">+</span></button>
+          <ul class="concept-list" id="tags-device" hidden>
+            <li><button class="concept-button" type="button">Decolonialidad</button></li>
+            <li><button class="concept-button" type="button">Interculturalidad</button></li>
+            <li><button class="concept-button" type="button">Visibilización</button></li>
+            <li><button class="concept-button" type="button">Sistema</button></li>
+            <li><button class="concept-button" type="button">Lengua</button></li>
+            <li><button class="concept-button" type="button">Oralidad</button></li>
+            <li><button class="concept-button" type="button">Archivo</button></li>
+            <li><button class="concept-button" type="button">Matriz de pensamiento</button></li>
+            <li><button class="concept-button" type="button">Interfaz</button></li>
+            <li><button class="concept-button" type="button">Memoria</button></li>
+            <li><button class="concept-button" type="button">Pedagogías de la crueldad</button></li>
+            <li><button class="concept-button" type="button">Identidad</button></li>
+            <li><button class="concept-button" type="button">Colonialidad de género</button></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="panel-view" id="entry-view" hidden>
+        <section class="entry-section" data-entry-panel="questions">
+          <button class="question-button" type="button" data-question="representation" aria-pressed="false"><span>¿Quién representa a quién?</span></button>
+          <div class="question-authors" data-authors-for="representation" hidden>
+            <button class="author-button" type="button" data-author="stuart-hall">Stuart Hall</button>
+            <button class="author-button" type="button" data-author="adolfo-alban-achinte">Adolfo Albán Achinte</button>
+          </div>
+          <button class="question-button" type="button" data-question="gaze" aria-pressed="false"><span>¿Quién mira y quién es mirado?</span></button>
+          <div class="question-authors" data-authors-for="gaze" hidden>
+            <button class="author-button" type="button" data-author="bell-hooks">bell hooks</button>
+          </div>
+          <button class="question-button" type="button" data-question="other" aria-pressed="false"><span>¿Cómo se construye “el otro”?</span></button>
+          <div class="question-authors" data-authors-for="other" hidden>
+            <button class="author-button" type="button" data-author="stuart-hall">Stuart Hall</button>
+            <button class="author-button" type="button" data-author="adolfo-alban-achinte">Adolfo Albán Achinte</button>
+          </div>
+          <button class="question-button" type="button" data-question="legitimacy" aria-pressed="false"><span>¿Quién decide qué imágenes son legítimas?</span></button>
+          <div class="question-authors" data-authors-for="legitimacy" hidden>
+            <button class="author-button" type="button" data-author="rolando-vazquez">Rolando Vázquez</button>
+          </div>
+          <button class="question-button" type="button" data-question="self" aria-pressed="false"><span>¿Qué cambia cuando alguien se representa a sí mismo?</span></button>
+          <div class="question-authors" data-authors-for="self" hidden>
+            <button class="author-button" type="button" data-author="adolfo-alban-achinte">Adolfo Albán Achinte</button>
+            <button class="author-button" type="button" data-author="hector-daniel-useche">Héctor Daniel Useche</button>
+          </div>
+          <button class="question-button" type="button" data-question="speak" aria-pressed="false"><span>¿Puede el diseño hablar por otros?</span></button>
+          <div class="question-authors" data-authors-for="speak" hidden>
+            <button class="author-button" type="button" data-author="arturo-escobar">Arturo Escobar</button>
+            <button class="author-button" type="button" data-author="ahmed-ansari">Ahmed Ansari</button>
+            <button class="author-button" type="button" data-author="danah-abdulla">Danah Abdulla</button>
+            <button class="author-button" type="button" data-author="ece-canli">Ece Canlı</button>
+            <button class="author-button" type="button" data-author="mahmoud-keshavarz">Mahmoud Keshavarz</button>
+            <button class="author-button" type="button" data-author="matthew-kiem">Matthew Kiem</button>
+            <button class="author-button" type="button" data-author="pedro-oliveira">Pedro Oliveira</button>
+            <button class="author-button" type="button" data-author="luiza-prado">Luiza Prado</button>
+            <button class="author-button" type="button" data-author="tristan-schultz">Tristan Schultz</button>
+          </div>
+        </section>
+        <section class="entry-section" data-entry-panel="authors" hidden>
+          <button class="author-button" type="button" data-author="stuart-hall">Stuart Hall</button>
+          <button class="author-button" type="button" data-author="adolfo-alban-achinte">Adolfo Albán Achinte</button>
+          <button class="author-button" type="button" data-author="bell-hooks">bell hooks</button>
+          <button class="author-button" type="button" data-author="rolando-vazquez">Rolando Vázquez</button>
+          <button class="author-button" type="button" data-author="hector-daniel-useche">Héctor Daniel Useche</button>
+          <button class="author-button" type="button" data-author="arturo-escobar">Arturo Escobar</button>
+          <button class="author-button" type="button" data-author="ahmed-ansari">Ahmed Ansari</button>
+          <button class="author-button" type="button" data-author="danah-abdulla">Danah Abdulla</button>
+          <button class="author-button" type="button" data-author="ece-canli">Ece Canlı</button>
+          <button class="author-button" type="button" data-author="mahmoud-keshavarz">Mahmoud Keshavarz</button>
+          <button class="author-button" type="button" data-author="matthew-kiem">Matthew Kiem</button>
+          <button class="author-button" type="button" data-author="pedro-oliveira">Pedro Oliveira</button>
+          <button class="author-button" type="button" data-author="luiza-prado">Luiza Prado</button>
+          <button class="author-button" type="button" data-author="tristan-schultz">Tristan Schultz</button>
+        </section>
+        <section class="entry-section" data-entry-panel="rae" hidden>
+        </section>
+      </div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
